@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        基本选择器  
+          -元素选择器
+            -根据标签名选中多个元素
+            -例如: p{} div{}等等
+          -id选择器
+             -根据元素的id属性来选中一个元素
+             -#id{}
+            
+          -类选择器(最常用的选择器)
+             -根据元素的class属性选中元素
+             -.class{} 
+          -通配选择器
+             -选择页面中的所有元素
+             -语法:*{}
+             -效率较低 
+          -属性选择器
+             -根据元素的属性来选中元素
+             -语法：
+             [属性名]{}  选中具有该属性的元素
+             [属性名=属性值] 选中具有这个名值对的元素
+          -交集选择器
+             -选中同时符合多个选择器要求的元素
+             -语法：选择器1选择器2选择器3....(中间不要有空格!)
+             -例子：div[title=属性值]
+                   div.属性值
+                   div#属性值(这个一般不用因为没有意义，#属性值是个id选择器已经能确定唯一元素了
+                   如果使用只能是为了调整优先级-->证明写的CSS结构有问题)*/
+            /* #p1 {
+                color:orange;
+            }
+            .羊{
+                color: green;
+
+            }
+            .狼{
+                color:red;
+            }
+            *{
+                color:orange;
+            } */
+            /* [title] {
+                color:orange;
+            } */
+            /* [title=智慧]{
+                color:rgb(5, 162, 246);
+            } */
+            /* 以下参考正则表达式语法 */
+            /* [title^=智]{
+                font-size:30px;
+            }
+            [title$=良]{
+                font-size:20px;
+            } */
+          /* 选择title=智慧的div元素
+          div{}
+          [title=智慧]{}
+          
+          可以将多个选择器连在一起写，这样则要求元素必须同时满足多个选择器需求*/
+          div[title=善良].羊{
+            color:yellow;
+          }
+    </style>
+</head>
+<body>
+    <!-- 
+    通过CSS选择器我们可以选中页面中的指定元素，从而为这些元素设置样式
+    CSS中为我们提供了大量的选择器但大部分都不常用
+
+     -->
+     <h6>
+        时光不识你我，少年清澈如昨。
+     </h6>
+     <p id="p1">
+        欲买桂花同载酒，终不似，少年游。
+     </p>
+     <p>
+        人面不知何处去，桃花依旧笑春风。
+     </p>
+     <!-- class属性和id类似，但可多次指定,拥有相同class的元素可以被称为同一类元素
+          一个元素可以有多个类class-->
+     <p class="羊" title="智慧">
+        喜羊羊
+     </p>
+     <p class="羊" title="幸运">
+        懒羊羊
+     </p>
+     <p class="狼" title="责任">
+        灰太狼
+     </p>
+     <p class="狼" >红太狼</p>
+     <p class="狼" class="羊" title="善良">
+        蕉太狼
+     </p>
+     <div title="善良" class="羊">
+       暖羊羊
+     </div>
+</body>
+</html>
