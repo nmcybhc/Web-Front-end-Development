@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本选择器</title>
+    <style>
+  /*基本选择器:
+          元素选择器
+          - 根据标签名选中多个元素
+          */
+      /* p{
+        color:red;
+      }     */
+/*id选择器 #id{} 优先级更高*/
+/* #p1{
+        color:aquamarine;
+      }
+       */
+
+/*类选择器  class和id很相似但是都可以指定，用来分类  最常用*/
+     /* .p2{
+        color:rgb(87, 250, 122);
+     }
+
+     .p3{
+        font-size:50px;
+     } */
+
+
+     /*通配选择器 选择页面中的所有元素 性能差一些，尽量少些使用*/
+     *{
+        color:orange;
+     }
+
+
+     /*属性选择器       */
+    </style>
+</head>
+<body> 
+    <p id="p1">落霞与孤鹜齐飞</p>
+    <p class="p2">选择器测试1</p>
+    <p class="p2 p3">选择器测试2</p>
+</body>
+</html>

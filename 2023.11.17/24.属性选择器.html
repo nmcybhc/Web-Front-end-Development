@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /*
+             属性选择器
+                - [属性名]选中具有该属性名的元素
+
+
+        */
+        /* [title=hello]{
+            color:orange;
+        }*/
+
+
+
+        /* [title=hellos]{
+            color:red;
+        } */
+
+
+
+         /* [title^=he]{ 
+            color:greenyellow;
+        }  ------^代表以...开头*/
+
+
+
+        /* [title$=os]{
+            color:blueviolet;
+        }   ---$代表以...结束*/
+
+
+
+        /* [title*=h]{
+            color:antiquewhite;
+        }  --*代表有 */
+
+
+
+/*参考正则表达式！！！*/
+/* [title=hellos]{
+    color:red;
+} */
+
+
+
+/*多个选择器连在一起写  
+
+————交集选择器
+        - 一种复合选择器，需要满足多个选择器的要求
+
+div[title=hellos]{
+    color:red;
+}
+    </style> 
+</head>
+*/
+
+
+
+
+<body>
+    <h1 title="hellos">落霞与孤鹜齐飞</h1>
+    <p title="abc">选择器测试1</p>
+    <p title="hehaha">选择器测试2</p>
+    <div title="hellos">秋水共长天一色</div>
+
+</body>
+
+</html>
